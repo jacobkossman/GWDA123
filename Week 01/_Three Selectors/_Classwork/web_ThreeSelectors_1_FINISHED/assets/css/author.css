@@ -1,0 +1,66 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:400,700';
+
+body {
+	background: #a6a6a6;
+	font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto Slab", serif;
+}
+
+p {
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+.container {
+	width: 100%;
+	max-width: 1366px;
+	margin: 0px auto;
+	background: #FFF;
+}
+
+*[class$="-third"] {
+	margin: 10px 1%;
+	padding: 10px 1%;
+	float: left;
+	background-color: #EEE;
+}
+
+.one-third {
+	width: 29.333%;
+}
+
+.two-third {
+	width: 62.667%;
+}
+
+.three-third {
+	width: 96%;
+}
+
+.clear {
+	clear: both;
+}
+
+nav {
+	padding-left: 0px !important;
+}
+
+nav a, nav a:visited, nav a:link {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: white;
+	background-color: blue;
+}
+
+nav a:hover, nav a:focus {
+	background-color: teal;
+}
+
+.main {
+	float: left;
+	margin-right: 15px;
+}
