@@ -1,0 +1,92 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:400,700';
+
+body {
+	background: #7CCDD5;
+	font-family: "Raleway", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	color: #235C62;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto Slab", serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+p {
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0px auto;
+	background: #FFF;
+}
+
+*[class$="-third"] {
+	margin: 10px 1%;
+	padding: 10px 1%;
+	float: left;
+}
+
+.one-third {
+	width: 29.333%;
+}
+
+.two-third {
+	width: 62.667%;
+}
+
+.three-third {
+	width: 96%;
+}
+
+.clear {
+	clear: both;
+}
+
+nav {
+	background-color: #56BDC7;
+	padding-left: 0px !important;
+}
+
+nav.three-third {
+    margin-left: 0px;
+    width: 99%;
+}
+
+nav a, nav a:visited, nav a:link {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: white;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+nav a:hover, nav a:focus {
+	background-color: #235C62;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+nav a.active {
+    background-color: #235C62;
+}
+
+.main {
+	float: left;
+	margin-right: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+	.main {
+    	margin-right: 0px;
+    	width: 100%;
+    	height: auto;
+    	float: none;
+	}
+}
