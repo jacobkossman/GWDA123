@@ -1,0 +1,76 @@
+/*RESET*/
+/*microclearfix hack :: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,.cf:after { content: " "; display: table;}
+.cf:after {  clear: both; }
+.cf { *zoom: 1; }
+/*so older browsers get the new HTML 5 tags right*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+/*All list items inside of navs should not look like list items.*/
+nav ul { margin:0px; padding:0px; }
+nav li { list-style-type:none; display:inline; }
+
+/*Layout*/
+body {
+	background-color: #0c1a11;
+	margin:25px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:#06270d;
+}
+#container { 
+	background-color:#eee; 
+	width:900px;
+	margin:auto;
+	padding:25px;
+	border-radius:5px;
+}
+#masthead {
+	background-image:url('grunge.jpg');
+	padding:25px;
+	border-radius:5px;
+	color:#e6ffc1;
+}
+#masthead h1 { 
+	font-family: Impact, Helvetica, Arial, sans-serif; 
+	font-size:70px; 
+	font-weight:bold; 
+	text-align:center;  
+}
+section {
+	border:dotted 2px #5097ca;
+	border-radius:5px;
+	margin:25px 0px;
+	padding:25px;
+}
+section h1 {
+	margin:0px 0px 10px;
+	font-size:40px;
+}
+#epilogue {
+	background-image:url('grunge.jpg');
+	padding:25px;
+	border-radius:5px;
+	color:#e6ffc1;
+	text-align:center; 
+}
+#epilogue h1 {  
+	font-size:30px; 
+	font-weight:bold;  
+}
+#epilogue nav a { 
+	display:inline-block; 
+	background-color:rgba(173,203,164,.7);
+	width:200px; 
+	padding:10px;
+	margin:10px;  
+	text-decoration:none; 
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:20px;
+	color:#0b130d;
+}
+#epilogue nav a:hover { background-color:rgba(191,233,179,.7); }
+
+
+
+
