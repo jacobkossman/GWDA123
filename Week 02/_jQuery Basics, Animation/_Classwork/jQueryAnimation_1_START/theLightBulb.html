@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery Basics</title>
+		<link rel="stylesheet" type="text/css" href="_css/style.css">
+		<style type="text/css">
+			/*Page Specific Styles*/
+			#container { width:996px; }
+			#stage {
+				background-image:url('_css/pixelgrid-2000x2000.png');
+				width:992px;height:600px;
+				position:relative;
+				margin:50px auto 10px;
+				border:solid 2px #272f26;
+				overflow:hidden;
+			}
+			#stage img.bulb {
+				box-sizing:border-box;
+				/*border:dotted 3px #701015;*/
+			}
+			#stage img#bulb1 {
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+			#controls {
+				text-align:center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<header id="masthead"><h1>The Light Bulb</h1></header>
+			<div id="stage">
+				<img id="bulb1" class="bulb" src="_images/lightBulb_off.png" height="200" width="200" />
+			</div>
+			<div id="controls">
+				<img id="playPause" src="_images/playPause-paused.png" height="82" width="161" />
+				<img id="stop" src="_images/stop-dormant.png" height="82" width="161" />
+			</div>
+			<footer id="epilogue">
+				<h1>Brought to you by the following</h1>
+				<nav class="jqueryManual">
+					<ul>
+						<li><a href="http://api.jquery.com/mouseover/">Mousover</a></li>
+						<li><a href="http://api.jquery.com/mouseout/">Mouseout</a></li>
+						<li><a href="http://api.jquery.com/animate/">Animate</a></li>
+						<li><a href="http://api.jquery.com/stop/">Stop</a></li>
+						<li><a href="http://api.jquery.com/click/">Click</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		<!-- Our scripting goes here. -->
+	</body>
+</html>
