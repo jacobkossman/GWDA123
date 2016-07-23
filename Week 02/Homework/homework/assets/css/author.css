@@ -1,0 +1,121 @@
+@import 'https://fonts.googleapis.com/css?family=Bangers';
+
+body {
+	padding: 0px;
+	margin: 0px;
+    background: url("../img/bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    font-family: "Bangers", cursive;
+    letter-spacing: .05em;
+}
+
+#grass {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.ball {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	z-index: 2;
+	width: 75px;
+	opacity: 1;
+}
+
+#one {
+    left: 20px;
+}
+
+#two {
+    left: 100px;
+}
+
+#goal {
+	position: absolute;
+	bottom: 0px;
+	left: 33%;
+	z-index: 0;
+	width: 500px;
+}
+
+h1 {
+    font-size: 6em;
+    position: absolute;
+    bottom: 200px;
+    left: 44%;
+    opacity: 0;
+}
+
+h2 {
+    font-size: 3em;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+h2::-moz-selection {
+    color: white;
+    background: red;
+}
+
+h2::selection {
+    color: white; 
+    background: red;
+}
+
+h2 small::-moz-selection {
+    color: white;
+    background: red;
+}
+
+h2 small::selection {
+    color: white; 
+    background: red;
+}
+
+
+#reset {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 0px;
+    border-radius: 16px;
+    padding: 10px 30px 10px 10px;
+    background-color: red;
+    font-family: "Bangers", cursive;
+    font-size: 4em;
+	border-bottom: 8px solid darkred;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+#reset i {
+    font-size: .7em;
+    position: relative;
+    top: -8px;
+}
+
+#reset:focus {
+    outline: 0;
+}
+
+#reset:hover {
+    background-color: red;
+    border-bottom-width: 0;
+    margin-top: 0.1em;
+    color: white;
+    outline: 0;
+}
