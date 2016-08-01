@@ -5,7 +5,17 @@
 		<title>Slideshows</title>
 		<link rel="stylesheet" type="text/css" href="_css/style.css">
 		<style type="text/css">
-			/*Page Specific Styles*/
+			#vertical .slides {
+				height: 300px;
+				width: 600px;
+				margin: 25px auto;
+				border: 10px solid red;
+				overflow: hidden;
+			}
+			
+			#vertical .slides img {
+				display: inline;
+			}
 		</style>
 	</head>
 
@@ -32,10 +42,22 @@
 				</nav>
 			</footer>
 		</div>
-		<script type="text/javascript" src="_js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="_js/jquery.min.js"></script>
 		<script type="text/javascript">
-			
-
+			$(document).ready(function(){
+			    function slideUp(){
+				    $("#vertical .slides img:first").animate({
+					    "margin-top" : "-300px"
+				    },function(){
+					    $(this).appendTo("#vertical .slides");
+					    $("#vertical .slides img:last").css({
+						    "margin-top" : "0px"
+					    });
+				    });
+			    }
+			    
+			    slideUp();
+			});
 		</script>
 	</body>
 </html>
