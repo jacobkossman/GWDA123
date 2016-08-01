@@ -5,7 +5,18 @@
 		<title>Slideshows</title>
 		<link rel="stylesheet" type="text/css" href="_css/style.css">
 		<style type="text/css">
-			/*Page Specific Styles*/
+			#faded .slides {
+				margin: 0px auto;
+				height: 300px;
+				width: 600px;
+				position: relative;
+			}
+			
+			#faded .slides img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
 		</style>
 	</head>
 
@@ -34,8 +45,23 @@
 		</div>
 		<script type="text/javascript" src="_js/jquery.min.js"></script>
 		<script type="text/javascript">
-			
+			$(document).ready(function(){
+				function fadeOut(){
+					var lastImg = $("#faded .slides img:last");
+					
+					lastImg.animate({
+						"opacity" : "0"
+					},1300, function(){
+						lastImg.prependTo("#faded .slides");
+						lastImg.css({
+							"opacity" : "1"
+						});
+						setTimeout(fadeOut,3000);
+					});
+				}
 
+				setTimeout(fadeOut,3000);
+			});
 		</script>
 	</body>
 </html>
