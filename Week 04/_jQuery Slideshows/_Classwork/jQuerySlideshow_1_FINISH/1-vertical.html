@@ -14,7 +14,7 @@
 			}
 			
 			#vertical .slides img {
-				display: inline;
+				display: block;
 			}
 		</style>
 	</head>
@@ -49,14 +49,14 @@
 				    $("#vertical .slides img:first").animate({
 					    "margin-top" : "-300px"
 				    },function(){
-					    $(this).appendTo("#vertical .slides");
+					    $("#vertical .slides img:last").appendTo("#vertical .slides");
 					    $("#vertical .slides img:last").css({
 						    "margin-top" : "0px"
 					    });
+						setTimeout(slideUp, 4000);
 				    });
 			    }
-			    
-			    slideUp();
+			    setTimeout(slideUp, 4000);
 			});
 		</script>
 	</body>
