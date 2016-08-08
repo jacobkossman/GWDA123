@@ -1,0 +1,106 @@
+@import 'https://fonts.googleapis.com/css?family=Reem+Kufi|Raleway:400,700';
+
+body {
+    background-color: #C4C4C4;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Reem Kufi', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 0px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+	text-align: justify;
+}
+
+a {
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #009182;
+	text-decoration: none;
+	border-bottom: 2px solid #009182;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+#faded .slideshow {
+	margin: 0px auto;
+	position: relative;
+	min-height: 500px;
+}
+
+#faded .slideshow img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+#horizontal .slideshow {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+#horizontal .slideshow .drawer {
+    width: 5000px;
+}
+
+#horizontal .slideshow .drawer img {
+    float: left;
+}
+
+
+nav {
+    margin-bottom: 10px;
+}
+
+nav a, nav a:visited {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #009182;
+}
+
+nav a:hover {
+    color: #009182;
+    background-color: white;
+    text-decoration: none;
+	border: 0px;
+}
+
+nav a.active {
+    color: #009182;
+    background-color: white;    
+}
+
+@media only screen and (max-width: 768px){
+    #faded .slideshow {
+        min-height: 200px;
+    }
+    
+    p {
+        text-align: left;
+    }
+}
