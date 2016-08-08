@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slideshow</title>
+	<style type="text/css">
+		@import 'https://fonts.googleapis.com/css?family=Oswald';
+		
+		body {
+			background-color: grey;
+			padding-top: 30px;
+			font-family: "Oswald", sans-serif;
+		}
+		
+		.container {
+			max-width: 1000px;
+			margin: 0px auto;
+		}
+		
+		h1 {
+			text-align: center;
+			font-size: 3em;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+		}
+
+		#vertical .slideshow {
+			max-width: 600px;
+			overflow: hidden;
+			margin: 0px auto;
+		}
+		
+		#vertical .slideshow img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Nerd Slideshow</h1>
+		<div id="vertical">
+			<div class="slideshow">
+				<img src="_images/donkyKong.jpg" alt="" />
+				<img src="_images/mario.jpg" alt="" />
+				<img src="_images/metroid.jpg" alt="" />
+				<img src="_images/pacMan.jpg" alt="" />
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js" charset="utf-8"></script>	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    function match(){
+// 			    var frameWidth = $("#vertical .slideshow").width();
+			    var imgHeight = $("#vertical .slideshow img").height();
+			    
+// 			    $("#vertical .slideshow img").css({"width":frameWidth});
+			    $("#vertical .slideshow").css({"height":imgHeight});
+		    }
+		    
+		    match();
+		    		    
+		    function slideUp(){
+			    var imgHeight = $("#vertical .slideshow img").height();
+		        var firstImg = $("#vertical .slideshow img:first");
+
+				match();
+		        
+		        $("#vertical .slideshow img:first").animate({
+		            "margin-top" : -imgHeight
+		        },700,function(){
+		            firstImg.appendTo("#vertical .slideshow");
+		            firstImg.css({
+		                "margin-top" : "0px"
+		            });
+ 		            setTimeout(slideUp,3000);
+		        });
+		    }
+		    
+		    setTimeout(slideUp,3000);
+		    
+			$(window).resize(match);
+					    
+		});
+	</script>
+</body>
+</html>
