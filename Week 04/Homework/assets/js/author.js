@@ -16,10 +16,11 @@ $(document).ready(function(){
 	setTimeout(fadeOut,4000);
 
     function slideLeft(){
-        var firstImg = $("#horizontal .slideshow .drawer img:first");
+	    var frameWidth = $("#horizontal .slideshow").width(),
+        	firstImg = $("#horizontal .slideshow .drawer img:first");
         
         $("#horizontal .slideshow .drawer img:first").animate({
-            "margin-left" : "-1000px"
+            "margin-left" : -frameWidth
         },function(){
             firstImg.appendTo("#horizontal .slideshow .drawer");
             firstImg.css({
@@ -30,4 +31,15 @@ $(document).ready(function(){
     }
 
     setTimeout(slideLeft,3000);
+    
+    function widthMatch(){
+	    var frameWidth = $("#horizontal .slideshow").width();
+	    
+	    $("#horizontal .slideshow img").css({"width":frameWidth});
+    }
+    
+    widthMatch();
+    
+    $(window).resize(widthMatch);
+    
 });
