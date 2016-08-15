@@ -1,0 +1,43 @@
+/*Page Specific Styles*/
+#gallery img { width:200px; }
+
+#theLight {
+	display: none;
+	background-color: #FFF;
+	padding: 25px;
+	width: 600px;
+	height: 315px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -325px;
+	margin-top: -200px;
+	z-index: 10;
+}
+
+#theLight .close {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#theLight .target {
+	
+}
+
+#theLight .target h1, #theLight .target p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+#theDark {
+	display: none;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background-color: #000;			
+	z-index: 0;
+}
