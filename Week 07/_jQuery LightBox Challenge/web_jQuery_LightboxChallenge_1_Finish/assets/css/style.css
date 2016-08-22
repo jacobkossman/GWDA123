@@ -1,0 +1,120 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Raleway:300|Open+Sans+Condensed:300';
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #F9FAD2;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Pacifico', cursive;
+}
+
+.container h1 {
+	font-size: 3em;
+	margin: 0px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0px auto;
+	background-color: #FFF;
+}
+
+.gallery {
+	text-align: center;
+}
+
+.gallery img {
+	width: 245px;
+	transition: opacity 200ms linear;
+}
+
+.gallery img:hover {
+	opacity: .7;
+	transition: opacity 200ms linear;
+}
+
+.shade {
+	display: none;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	opacity: .7;
+	background-color: black;
+	z-index: 10;
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	width: 50%;
+	background-color: white;
+	z-index: 20;
+	padding: 25px;
+}
+
+.modal img {
+	text-align: center;
+}
+
+.modal .close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.modal .price {
+	font-family: 'Pacifico', cursive;
+	font-weight: 300;
+	position: absolute;
+	top: 28%;
+	right: 18%;
+	font-size: 4em;
+	background-color: black;
+	color: #F9FAD2;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 1.3em;
+	width: 100px;
+	height: 100px;
+}
+
+.modal .price span {
+	position: absolute;
+	left: 12px;
+	font-size: .3em;
+}
+
+.modal p {
+	text-align: left;
+}
+
+.modal h1 {
+	font-size: 3em;
+	text-align: left;
+	margin: 0px;
+	margin: 0px 0px 10px 0px;
+	line-height: 1.2em;
+}
+
+.modal img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 768px) {
+	.modal .price {
+		top: 45%;
+		font-size: 2em;
+		width: 50px;
+		height: 50px;
+	}
+}
