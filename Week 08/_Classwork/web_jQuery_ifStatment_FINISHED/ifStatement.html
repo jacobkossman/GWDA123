@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>If Statement</title>
+		<link rel="stylesheet" type="text/css" href="_css/style.css">
+		<style type="text/css">
+			#reset{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<header><h1>jQuery if Statement</h1></header>
+			<div id="info">
+				<p><strong>Conditional statements are used to perform different actions based on different conditions.</strong></p>
+				<p>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true</p>
+				<p>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false</p>
+				<p>Use <strong>else if</strong> to specify a new condition to test, if the first condition is false</p>
+			</div>
+			<section id="solution">
+				<h2>Save Your Money!</h2>
+				<p><i>Click on the money and feed the Piggy Bank</i></p>
+				<img id="money" src="_images/money.png" height="150" width="150">
+				<img id="piggy" src="_images/piggyBank1.png" height="400" width="450">	
+			</section>
+			<div id="savings">
+				<h3 id="reset">Your Piggy Bank is full. <a href="ifStatement.html">Empty your account?</a></h3>
+				<h2>Your Savings:$<span id="amount">0</span></h2>
+			</div>
+			<footer>
+				<h3>Brought to you by the following</h3>
+				<nav class="jqueryManual">
+					<ul>
+						<li><a href="http://www.w3schools.com/js/js_if_else.asp">w3schools</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></li>
+						<li><a href="http://api.jquery.com/html/">HTML</a></li>
+						<li><a href="http://www.w3schools.com/css/css_positioning.asp">CSS positioning</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		<script type="text/javascript" src="_js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function (){
+				// console.log("it's working!");
+				var money = $("#money");
+				var piggy = $("#piggy");
+				var amount = $("#amount");
+				var x = 0;
+
+				function dropMoney(){
+					// console.log("click works");
+					function addCash(){
+
+						function complete(){
+							money.css({"top":"150px"});
+							x = x += 10;
+							amount.html(x);
+						}
+
+						if(x < 20)
+						{
+							piggy.attr('src',"_images/piggyBank1.png");
+							complete();
+						}
+						else if(x > 20, x < 90)
+						{
+							piggy.attr('src',"_images/piggyBank2.png");
+							complete();
+						}
+						else if( x == 90)
+						{
+							piggy.attr('src',"_images/piggyBank3.png");
+							x = x += 10;
+							amount.html(x);
+							$("#reset").show();
+						}
+						else{
+							console.log("done");
+						}
+					}
+					money.animate({"top": "350px"}, 250, addCash);
+				}
+
+				money.click(dropMoney);
+			});
+
+		</script>
+	</body>
+</html>
